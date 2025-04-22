@@ -1,5 +1,5 @@
 from django.db import models
-from customers.models import Customers
+from customers.models import Customer
 
 
 class VehicleType(models.Model):
@@ -29,7 +29,7 @@ class Vehicle(models.Model):
     model = models.CharField(max_length=50, blank=True, null=True, verbose_name='Modelo')
     color = models.CharField(max_length=50, blank=True, null=True, verbose_name='Cor')
     owner = models.ForeignKey(
-        Customers,
+        Customer,
         on_delete=models.PROTECT,
         blank=True,
         null=True,
