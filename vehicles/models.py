@@ -14,7 +14,7 @@ class VehicleType(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 
 class Vehicle(models.Model):
     vehicle_type = models.ForeignKey(
@@ -24,7 +24,7 @@ class Vehicle(models.Model):
         related_name='vehicles',
         verbose_name='Tipo de Veículo'
     )
-    license_plate = models.CharField(max_length=10, unique=True,verbose_name='Placa')
+    license_plate = models.CharField(max_length=10, unique=True, verbose_name='Placa')
     brand = models.CharField(max_length=50, blank=True, null=True, verbose_name='Marca')
     model = models.CharField(max_length=50, blank=True, null=True, verbose_name='Modelo')
     color = models.CharField(max_length=50, blank=True, null=True, verbose_name='Cor')
