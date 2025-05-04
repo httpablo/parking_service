@@ -75,7 +75,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'parking_db',
-        'POPST': '5432',
+        'PORT': '5432',
     }
 }
 
@@ -137,3 +137,5 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SCHEMA_PATH_PREFIX': r'/api/v1',
 }
+
+CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672//'
